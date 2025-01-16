@@ -63,7 +63,7 @@ public class Main {
             default:
                 System.out.println("Введен неправильный номер месяца");
         }
-        //Finish!!!//
+        //Finish!!!!//
 
 
 
