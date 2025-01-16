@@ -1,30 +1,36 @@
 public class Main {
     public static void main(String[] args) {
         //Условный оператор 2//
-        //Задача 1-2//
+        //Задача 1//
         byte clientOS = 1;
-        int clientDeviceYear = 2022;
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
+        if (clientOS==0){
             System.out.println("Установите версию приложения для Android по ссылке");
-        }else {
+        } else if (clientOS==0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        //Задача 2//
+        int clientDeviceYear=2014;
+        if (clientOS==1 && clientDeviceYear>=2015){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }else if(clientOS==1 && clientDeviceYear<2015){
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
-        if (clientOS == 0 && clientDeviceYear >= 2015){
+        if(clientOS==0 && clientDeviceYear>=2015){
             System.out.println("Установите версию приложения для Android по ссылке");
-        }else{
+        }else if(clientOS==0 &&clientDeviceYear<2015){
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
+
         //Задача 3//
         int year=2025;
-        if (year>=1585){
-        if ((year%400 ==0) || (year%4==0 && year%100!=0)){
+        if (year>1584) {
+        }else if ((year%400 ==0) || (year%4==0 && year%100!=0)){
             System.out.println(year+" год является високосным");
-        }else{
-            System.out.println(year+" год не является високосным");
+        }else {
+            System.out.println(year + " год не является високосным");
         }
-        }else{
-            System.out.println("Год не может быть меньше 1585");
-        }
+
+
         //Задача 4//
         byte deliveryDistance = 95;
         byte deliveryDays=1;
