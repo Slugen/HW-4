@@ -31,7 +31,7 @@ public class Main {
         }
 
 
-        ///Задача 4///
+        //Задача 4//
         byte deliveryDistance = 95;
         byte deliveryDays=1;
         if (deliveryDistance<=20){
