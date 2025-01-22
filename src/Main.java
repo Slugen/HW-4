@@ -1,69 +1,92 @@
 public class Main {
     public static void main(String[] args) {
-        //Условный оператор 2//
-        //Задача 1-2//
-        byte clientOS = 1;
-        int clientDeviceYear = 2022;
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }else {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        //Циклы 2//
+        //Задача 1
+        int salary=15000;
+        int total=0;
+        int i=0;
+        while (total<=2_459_000){
+            i++;
+            total=total+salary;
+            System.out.println("Месяц "+i+" сумма накоплений равна "+total);
         }
-        if (clientOS == 0 && clientDeviceYear >= 2015){
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }else{
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        //Задача 2
+        int number=1;
+        while (number<=10){
+            System.out.print(" "+number );
+            number++;
         }
-        //Задача 3//
-        int year=2025;
-        if (year>=1585){
-        if ((year%400 ==0) || (year%4==0 && year%100!=0)){
-            System.out.println(year+" год является високосным");
-        }else{
-            System.out.println(year+" год не является високосным");
+        System.out.println();
+        for (i=10; i>=1;){
+            System.out.printf(" "+i);
+            i--;
         }
-        }else{
-            System.out.println("Год не может быть меньше 1585");
+        //Задача 3
+        int population=12_000_000;
+        int numberYear =2025;
+        while (numberYear <=2035){
+            numberYear++;
+            population+=(population*17)/1000;
+            population-=(population*8)/1000;
+            System.out.println("Год "+ numberYear +", численность населения составляет "+population);
         }
-        //Задача 4//
-        byte deliveryDistance = 95;
-        byte deliveryDays=1;
-        if (deliveryDistance<=20){
-            System.out.println("Потребуется дней: "+deliveryDays);
-        } else if(deliveryDistance>20 && deliveryDistance<=60){
-            System.out.println("Потребуется дней: "+(deliveryDays+1));
-        } else if (deliveryDistance>60 && deliveryDistance<=100){
-            System.out.println("Потребуется дней: "+(deliveryDays+2));
-        }else if (deliveryDistance>100){
-            System.out.println("Доставки нет");
+        //Задача 4-5
+        int amount=15000;
+        double monthlyRate=0.07;
+        int month=0;
+        while (amount<=12_000_000) {
+            amount *= (1 + monthlyRate);
+            month++;
+            if (month%6==0) {
+                System.out.println("Месяц " + month + " сумма накоплений " + amount);
+            }
         }
-        //Задача 5//
-        byte monthNumber=5;
-        switch (monthNumber){
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Холодная зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                    System.out.println("Расцветающая весна");
-                    break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Жаркое лето");
-                    break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Дождливая осень");
-                break;
-            default:
-                System.out.println("Введен неправильный номер месяца");
+        //Задача 6
+        int totalAmount=15000;
+        double monthlyPercent=0.07;
+        int yearQuantity =0;
+        int halfYear=0;
+        int totalMonths=0;
+        while (yearQuantity <=9){
+            totalMonths++;
+            totalAmount+=(totalAmount*monthlyPercent);
+            if (totalMonths%6==0){
+                halfYear++;
+                System.out.println(totalAmount);
+                if (halfYear%2==0) {
+                    yearQuantity++;
+                }
+            }
+
         }
-        //Finish//
+        //Задача 7
+        int friday=3;
+        while (friday<=31){
+            System.out.println("Сегодня пятница, "+friday+"-е число. Необходимо подготовить отчет");
+            friday+=7;
+        }
+        //Задача 8
+        int year =2022;
+        int yearBefore=year -200;
+        int yearAfter= year +100;
+        for (year=yearBefore; year>=yearBefore && year<=yearAfter; year++){
+            if (year%79==0){
+                System.out.println(year);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
