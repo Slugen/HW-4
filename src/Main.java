@@ -1,48 +1,85 @@
 public class Main {
     public static void main(String[] args) {
-        //Циклы//
+        //Циклы 2//
         //Задача 1
-        for (int i=1; i<=10; i+=1) {
-            System.out.println(i);
+        int salary=15000;
+        int total=0;
+        int i=0;
+        while (total<=2_459_000){
+            i++;
+            total=total+salary;
         }
+        System.out.println("Месяц "+i+" сумма накоплений равна "+total);
         //Задача 2
-        for (int i=10; i>=1; i-=1) {
-            System.out.println(i);
+        int number=1;
+        while (number<=10){
+            System.out.print(" "+number );
+            number++;
+        }
+        System.out.println();
+        for (i=10; i>=1;){
+            System.out.printf(" "+i);
+            i--;
         }
         //Задача 3
-        for (int i=0; i<=17; i+=2){
-            System.out.println(i);
+        int population=12_000_000;
+        int numberYear =2025;
+        while (numberYear <=2035){
+            numberYear++;
+            population+=17;
+            population-=8;
+            System.out.println("Год "+ numberYear +", численность населения составляет "+population);
         }
-        //Задача 4
-        for (int i=10; i>=-10; i-=1){
-            System.out.println(i);
-        }
-        //Задача 5
-        for (int i=1904; i<=2096; i+=4){
-            System.out.println(i+" год является високосным");
+        //Задача 4-5
+        int amount=15000;
+        double monthlyRate=0.07;
+        int month=0;
+        while (amount<=12_000_000) {
+            amount *= (1 + monthlyRate);
+            month++;
+            if (month%6==0) {
+                System.out.println("Месяц " + month + " сумма накоплений " + amount);
+            }
         }
         //Задача 6
-        for (int i=7; i<=98; i+=7){
-            System.out.println(i);
+        int totalAmount=15000;
+        double monthlyPercent=0.07;
+        int year=0;
+        int halfYear=0;
+        int totalMonths=0;
+        while (year<=9){
+            totalMonths++;
+            totalAmount+=(totalAmount*monthlyPercent);
+            if (totalMonths%6==0){
+                halfYear++;
+                System.out.println(totalAmount);
+                if (halfYear%2==0) {
+                    year++;
+                }
+            }
+
         }
         //Задача 7
-        for (int i=1; i<=512; i*=2){
-            System.out.println(i);
+        int friday=3;
+        while (friday<=31){
+            System.out.println("Сегодня пятница, "+friday+"-е число. Необходимо подготовить отчет");
+            friday+=7;
         }
-        //Задача 8-9
-        int salary=29000;
-        int total=0;
-        for (int i=1; i<=12; i++) {
-            total = total + total / 100;
-            total = total + salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+        //Задача 8
+        for (int i1=1896; i1<=2054;) {
+            System.out.println(i1);
+            i1+=79;
         }
-        //Задача 10
-        int number=2;
-        System.out.println("Таблица умножения на "+number);
-        for (int i=0; i<=10; i++){
-            System.out.println(number+"x"+i+"="+(number*i));
-        }
+
+
+
+
+
+
+
+
+
+
 
 
 
