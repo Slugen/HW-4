@@ -8,8 +8,8 @@ public class Main {
         while (total<=2_459_000){
             i++;
             total=total+salary;
+            System.out.println("Месяц "+i+" сумма накоплений равна "+total);
         }
-        System.out.println("Месяц "+i+" сумма накоплений равна "+total);
         //Задача 2
         int number=1;
         while (number<=10){
@@ -26,8 +26,8 @@ public class Main {
         int numberYear =2025;
         while (numberYear <=2035){
             numberYear++;
-            population+=17;
-            population-=8;
+            population+=(population*17)/1000;
+            population-=(population*8)/1000;
             System.out.println("Год "+ numberYear +", численность населения составляет "+population);
         }
         //Задача 4-5
@@ -44,17 +44,17 @@ public class Main {
         //Задача 6
         int totalAmount=15000;
         double monthlyPercent=0.07;
-        int year=0;
+        int yearQuantity =0;
         int halfYear=0;
         int totalMonths=0;
-        while (year<=9){
+        while (yearQuantity <=9){
             totalMonths++;
             totalAmount+=(totalAmount*monthlyPercent);
             if (totalMonths%6==0){
                 halfYear++;
                 System.out.println(totalAmount);
                 if (halfYear%2==0) {
-                    year++;
+                    yearQuantity++;
                 }
             }
 
@@ -66,9 +66,13 @@ public class Main {
             friday+=7;
         }
         //Задача 8
-        for (int i1=1896; i1<=2054;) {
-            System.out.println(i1);
-            i1+=79;
+        int year =2022;
+        int yearBefore=year -200;
+        int yearAfter= year +100;
+        for (year=yearBefore; year>=yearBefore && year<=yearAfter; year++){
+            if (year%79==0){
+                System.out.println(year);
+            }
         }
 
 
