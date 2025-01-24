@@ -1,82 +1,44 @@
 public class Main {
     public static void main(String[] args) {
-        //Циклы 2//
+        //Массивы//
         //Задача 1
-        int salary=15000;
-        int total=0;
-        int i=0;
-        while (total<=2_459_000){
-            i++;
-            total=total+salary;
-            System.out.println("Месяц "+i+" сумма накоплений равна "+total);
-        }
+        int[] array1 = new int[3];
+        array1[0] = 1;
+        array1[1] = 2;
+        array1[2] = 3;
+        double[] array2 = {1.57, 7.654, 9.986,};
+        int[] daysInWeek = {1, 2, 3, 4, 5, 6, 7,};
         //Задача 2
-        int number=1;
-        while (number<=10){
-            System.out.print(" "+number );
-            number++;
+        System.out.println(array1[0] + ", " + array1[1] + ", " + array1[2]);
+        System.out.println(array2[0] + ", " + array2[1] + ", " + array2[2]);
+        for (int i = 0; i < daysInWeek.length; i++) {
+            System.out.print(daysInWeek[i] + ",");
         }
         System.out.println();
-        for (i=10; i>=1;){
-            System.out.printf(" "+i);
-            i--;
-        }
         //Задача 3
-        int population=12_000_000;
-        int numberYear =2025;
-        while (numberYear <=2035){
-            numberYear++;
-            population+=(population*17)/1000;
-            population-=(population*8)/1000;
-            System.out.println("Год "+ numberYear +", численность населения составляет "+population);
+        for (int i=array1.length-1; i>=0; i--){
+            System.out.print(array1[i]+", ");
         }
-        //Задача 4-5
-        int amount=15000;
-        double monthlyRate=0.07;
-        int month=0;
-        while (amount<=12_000_000) {
-            amount *= (1 + monthlyRate);
-            month++;
-            if (month%6==0) {
-                System.out.println("Месяц " + month + " сумма накоплений " + amount);
+        System.out.println();
+        for (int i=array2.length-1; i>=0; i--){
+            System.out.print(array2[i]+", ");
+        }
+        System.out.println();
+        for (int i=daysInWeek.length-1;i>=0; i--){
+            System.out.print(daysInWeek[i]+", ");
+        }
+        System.out.println();
+        //Задача 4
+        int[] numbers={0,1,2,3,4,5,6,7,8,9,10};
+        for (int i=0; i<numbers.length;i++){
+            if (numbers[i]%2==0){
+                numbers[i]++;
+                System.out.print(numbers[i]+",");
             }
         }
-        //Задача 6
-        int totalAmount=15000;
-        double monthlyPercent=0.07;
-        int yearQuantity =0;
-        int halfYear=0;
-        int totalMonths=0;
-        while (yearQuantity <=9){
-            totalMonths++;
-            totalAmount+=(totalAmount*monthlyPercent);
-            if (totalMonths%6==0){
-                halfYear++;
-                System.out.println(totalAmount);
-                if (halfYear%2==0) {
-                    yearQuantity++;
-                }
-            }
 
-        }
-        //Задача 7
-        int friday=3;
-        while (friday<=31){
-            System.out.println("Сегодня пятница, "+friday+"-е число. Необходимо подготовить отчет");
-            friday+=7;
-        }
-        //Задача 8
-        int year =2022;
-        int yearBefore=year -200;
-        int yearAfter= year +100;
-        for (year=yearBefore; year>=yearBefore && year<=yearAfter; year++){
-            if (year%79==0){
-                System.out.println(year);
-            }
-        }
-        //Finish
-
-
-        }
 
     }
+}
+
+
