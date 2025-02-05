@@ -1,72 +1,53 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //Условный оператор 2//
-        //Задача 1-2//
-        byte clientOS = 1;
-        int clientDeviceYear = 2022;
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }else {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        //Массивы 2//
+        //Задача 1
+        int[] weeklyExpenses = {7959, 5963, 9530, 6784, 10000};
+        int totalExpenses = 0;
+        for (int expense : weeklyExpenses) {
+            totalExpenses += expense;
         }
-        if (clientOS == 0 && clientDeviceYear >= 2015){
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }else{
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
-        //Задача 3//
-        int year=2025;
-        if (year>=1585){
-        if ((year%400 ==0) || (year%4==0 && year%100!=0)){
-            System.out.println(year+" год является високосным");
-        }else{
-            System.out.println(year+" год не является високосным");
-        }
-        }else{
-            System.out.println("Год не может быть меньше 1585");
-        }
-        //Задача 4//
-        byte deliveryDistance = 95;
-        byte deliveryDays=1;
-        if (deliveryDistance<=20){
-            System.out.println("Потребуется дней: "+deliveryDays);
-        } else if(deliveryDistance>20 && deliveryDistance<=60){
-            System.out.println("Потребуется дней: "+(deliveryDays+1));
-        } else if (deliveryDistance>60 && deliveryDistance<=100){
-            System.out.println("Потребуется дней: "+(deliveryDays+2));
-        }else if (deliveryDistance>100){
-            System.out.println("Доставки нет");
-        }
-        //Задача 5//
-        byte monthNumber=5;
-        switch (monthNumber){
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Холодная зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                    System.out.println("Расцветающая весна");
-                    break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Жаркое лето");
-                    break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Дождливая осень");
-                break;
-            default:
-                System.out.println("Введен неправильный номер месяца");
-        }
-        //Finish//
+        System.out.println("Сумма трат за месяц составила " + totalExpenses + " рублей");
 
-
-
+        //Задача 2
+        int[] weeklyExpenses2 = {7959, 5963, 9530, 6784, 10000};
+        int minExpense = weeklyExpenses2[0];
+        int maxExpense = weeklyExpenses2[0];
+        for (int expense : weeklyExpenses2) {
+            if (expense < minExpense) {
+                minExpense = expense;
+            }
+            if (expense > maxExpense) {
+                maxExpense = expense;
+            }
         }
+        System.out.println("Минимальная сумма трат за неделю составила " + minExpense + " рублей");
+        System.out.println("Максимальная сумма трат за неделю составила " + maxExpense + " рублей");
+
+        //Задача 3
+        int[] weeklyExpenses3 = {7959, 5963, 9530, 6784, 10000};
+        double averageExpense = 0;
+        int allExpenses = 0;
+        for (int expense : weeklyExpenses3) {
+            allExpenses += expense;
+            System.out.println(allExpenses);
+        }
+        averageExpense = allExpenses / weeklyExpenses3.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageExpense + " рублей");
+
+        //Задача 4
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+        //Finish
+
 
     }
+}
+
+
+
+
