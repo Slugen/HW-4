@@ -2,54 +2,52 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //Массивы//
+        //Массивы 2//
         //Задача 1
-        int[] array1 = new int[3];
-        array1[0] = 1;
-        array1[1] = 2;
-        array1[2] = 3;
-        double[] array2 = {1.57, 7.654, 9.986,};
-        int[] daysInWeek = {1, 2, 3, 4, 5, 6, 7};
+        int[] weeklyExpenses = {7959, 5963, 9530, 6784, 10000};
+        int totalExpenses = 0;
+        for (int expense : weeklyExpenses) {
+            totalExpenses += expense;
+        }
+        System.out.println("Сумма трат за месяц составила " + totalExpenses + " рублей");
+
         //Задача 2
-        System.out.println(Arrays.toString(array1));
-        System.out.println(Arrays.toString(array2));
-        System.out.println(Arrays.toString(daysInWeek));
+        int[] weeklyExpenses2 = {7959, 5963, 9530, 6784, 10000};
+        int minExpense = weeklyExpenses2[0];
+        int maxExpense = weeklyExpenses2[0];
+        for (int expense : weeklyExpenses2) {
+            if (expense < minExpense) {
+                minExpense = expense;
+            }
+            if (expense > maxExpense) {
+                maxExpense = expense;
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила " + minExpense + " рублей");
+        System.out.println("Максимальная сумма трат за неделю составила " + maxExpense + " рублей");
+
         //Задача 3
-        for (int i=array1.length-1; i>=0; i--){
-            System.out.print(array1[i]);
-            if (i>0){
-                System.out.print(", ");
-            }
+        int[] weeklyExpenses3 = {7959, 5963, 9530, 6784, 10000};
+        double averageExpense = 0;
+        int allExpenses = 0;
+        for (int expense : weeklyExpenses3) {
+            allExpenses += expense;
+            System.out.println(allExpenses);
         }
-        System.out.println();
-        for (int i=array2.length-1; i>=0; i--){
-            System.out.print(array2[i]);
-            if (i>0){
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i=daysInWeek.length-1; i>=0; i--){
-            System.out.print(daysInWeek[i]);
-            if (i>0){
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
+        averageExpense = allExpenses / weeklyExpenses3.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageExpense + " рублей");
+
         //Задача 4
-        int[] numbers={0,1,2,3,4,5,6,7,8,9,10};
-        for (int i=0; i<numbers.length;i++){
-            if (numbers[i]%2==1) {
-                numbers[i]++;
-                System.out.print(numbers[i]);
-                if (i > 0) {
-                    System.out.print(", ");
-                }
-            }
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
+        //Finish
 
 
     }
 }
+
+
 
 
