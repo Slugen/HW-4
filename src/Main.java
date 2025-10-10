@@ -20,7 +20,7 @@ public class Main {
         String correctFullName2=fullName2.replace("ё","е");
         System.out.println("Данные Ф. И. О. сотрудника — "+correctFullName2);
 
-        //Finish
+        //Finish//
     }
 }
 
