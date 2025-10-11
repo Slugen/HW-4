@@ -1,29 +1,59 @@
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.concurrent.ConcurrentLinkedDeque;
-
 public class Main {
+    //Тема "Методы"//
+
     public static void main(String[] args) {
-        //Тема "Строки"//
         //Задача 1
-        String firstName = (" Ivan");
-        String middleName = (" Ivanovich");
-        String lastName = (" Ivanov");
-        String fullName = lastName+firstName+middleName;
-        System.out.println("Ф.И.О. сотрудника —" + fullName);
-
+        leapYear(2025);
         //Задача 2
-        System.out.println("Данные Ф.И.О. сотрудника для заполнения отчета —"+fullName.toUpperCase());
-
+        checkDevice(1, 2019);
+        System.out.println(checkDevice(1, 2019));
         //Задача 3
-        String fullName2 = ("Иванов Семён Семёнович");
-        String correctFullName2=fullName2.replace("ё","е");
-        System.out.println("Данные Ф. И. О. сотрудника — "+correctFullName2);
-
-        //Finish!!!//
+        System.out.println("Потребуется дней: "+(calculateDeliveryDays(95)));
     }
+    //Finish "вроде"
+
+    public static void leapYear(int year) {
+        if ((year % 4 == 0) && (year % 100 != 0) || year % 400 == 0) {
+            System.out.println(year + " год — високосный год");
+        } else {
+            System.out.println(year + " год — невисокосный год");
+        }
+
+
+    }
+
+    public static String checkDevice(int clientOs, int clientDeviceYear) {
+        if (clientOs == 1) {
+            if (clientDeviceYear < 2015) {
+                return "Установите облегченную версию приложения для Android по ссылке";
+            } else {
+                return "Установите версию приложения для Android по ссылке";
+            }
+        } else {
+            if (clientOs == 0 && clientDeviceYear < 2015) {
+                return "Установите облегченную версию приложения для iOS по ссылке";
+            } else {
+                return "Установите версию приложения для iOS по ссылке";
+            }
+        }
+    }
+
+    public static int calculateDeliveryDays(int deliveryDistance) {
+        int deliveryDays = 1;
+        if (deliveryDistance <= 20) {
+            return deliveryDays;
+        } else if (deliveryDistance <= 60) {
+            return deliveryDays+=1 ;
+        } else if (deliveryDistance<=100) {
+            return deliveryDays+=2 ;
+        }else{
+            return -1 ;
+        }
+
+
+    }
+
+
+
+
 }
-
-
-
-
