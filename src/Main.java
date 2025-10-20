@@ -6,9 +6,8 @@ public class Main {
         leapYear(2025);
         //Задача 2
         checkDevice(1, 2019);
-        System.out.println(checkDevice(1, 2019));
         //Задача 3
-        System.out.println("Потребуется дней: "+(calculateDeliveryDays(95)));
+        System.out.println("Потребуется дней: " + (calculateDeliveryDays(95)));
     }
     //Finish "вроде"
 
@@ -22,38 +21,36 @@ public class Main {
 
     }
 
-    public static String checkDevice(int clientOs, int clientDeviceYear) {
+    public static void checkDevice(int clientOs, int clientDeviceYear) {
         if (clientOs == 1) {
-            if (clientDeviceYear < 2015) {
-                return "Установите облегченную версию приложения для Android по ссылке";
+            if (clientDeviceYear <= 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
-                return "Установите версию приложения для Android по ссылке";
+                System.out.println("Установите приложения для Android по ссылке");
             }
         } else {
-            if (clientOs == 0 && clientDeviceYear < 2015) {
-                return "Установите облегченную версию приложения для iOS по ссылке";
+            if (clientDeviceYear <= 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
-                return "Установите версию приложения для iOS по ссылке";
+                System.out.println("Установите приложения для iOS по ссылке");
             }
         }
     }
+
+
 
     public static int calculateDeliveryDays(int deliveryDistance) {
         int deliveryDays = 1;
         if (deliveryDistance <= 20) {
             return deliveryDays;
         } else if (deliveryDistance <= 60) {
-            return deliveryDays+=1 ;
-        } else if (deliveryDistance<=100) {
-            return deliveryDays+=2 ;
-        }else{
-            return -1 ;
+            return deliveryDays += 1;
+        } else if (deliveryDistance <= 100) {
+            return deliveryDays += 2;
+        } else {
+            return -1;
         }
 
 
     }
-
-
-
-
 }
