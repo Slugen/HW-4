@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     //Тема "Методы"//
 
@@ -22,14 +24,15 @@ public class Main {
     }
 
     public static void checkDevice(int clientOs, int clientDeviceYear) {
+        int currentYear = LocalDate.now().getYear();
         if (clientOs == 1) {
-            if (clientDeviceYear <= 2015) {
+            if (clientDeviceYear > currentYear) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите приложения для Android по ссылке");
             }
         } else {
-            if (clientDeviceYear <= 2015) {
+            if (clientDeviceYear > currentYear) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите приложения для iOS по ссылке");
