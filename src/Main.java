@@ -11,7 +11,7 @@ public class Main {
         //Задача 3
         System.out.println("Потребуется дней: " + (calculateDeliveryDays(95)));
     }
-    //Finish "вроде"
+    //Finish "вроде?"
 
     public static void leapYear(int year) {
         if ((year % 4 == 0) && (year % 100 != 0) || year % 400 == 0) {
