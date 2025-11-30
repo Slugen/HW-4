@@ -25,20 +25,16 @@ public class Main {
 
     public static void checkDevice(int clientOs, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
-        if (clientOs == 1) {
-            if (clientDeviceYear > currentYear) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите приложения для Android по ссылке");
-            }
-        } else {
-            if (clientDeviceYear > currentYear) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите приложения для iOS по ссылке");
-            }
+        if (clientOs == 1 && clientDeviceYear <= currentYear) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOs == 1 && clientDeviceYear >= currentYear) {
+            System.out.println("Установите приложения для Android по ссылке");
+        } else if (clientOs == 0 && clientDeviceYear <= currentYear) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOs == 0 && clientDeviceYear >= currentYear) {
+            System.out.println("Установите приложения для iOS по ссылке");
         }
-    }
+    }   
 
 
 
